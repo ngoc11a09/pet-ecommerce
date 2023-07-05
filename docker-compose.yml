@@ -1,16 +1,16 @@
 version: "3.8"
 services:
-  dev-database:
+  pet-ecommerce-db-dev:
     image: postgres:14.1-alpine
-    container_name: dev-database
+    container_name: pet-ecommerce-db-dev
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: ecommerce
     ports:
       - "5433:5432"
-  dev-s3:
+  pet-ecommerce-s3-dev:
     image: scireum/s3-ninja
-    container_name: dev-s3
+    container_name: pet-ecommerce-s3-dev
     ports:
       - 9444:9000
